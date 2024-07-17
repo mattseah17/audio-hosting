@@ -1,7 +1,8 @@
-FROM node:14
+FROM node:16
 WORKDIR /app
 COPY server/package*.json ./
 RUN npm install
 COPY server/ .
-EXPOSE 5000
+RUN mkdir -p uploads && chmod 755 uploads
+EXPOSE 5002
 CMD ["node", "index.js"]
