@@ -152,3 +152,24 @@ For testing purposes, you can use the following credentials:
 
 - Email: test02@gmail.com
 - Password: 12345678
+
+## Building Docker Images
+
+To build the Docker images for this project:
+
+1. Ensure you are in the root directory of the project.
+
+2. Build the server image:
+   ```
+   docker build -t audio-hosting-server -f Dockerfile.server
+   ```
+3. Build the client image:
+   ```
+   docker build -t audio-hosting-client -f Dockerfile.client
+   ```
+
+The Dockerfiles for both the client and server are included in the project root directory (Dockerfile.client and Dockerfile.server). Instructions for building the Docker images and running the application are provided in this README.md file.
+
+These commands will create Docker images named `audio-hosting-server` and `audio-hosting-client` respectively.
+
+Note: Building the images separately is not necessary if you're using docker-compose, as it will build the images automatically when you run `docker-compose up --build`.
