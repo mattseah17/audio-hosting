@@ -9,49 +9,54 @@ The Audio Hosting Web Application is built using a modern full-stack architectur
 ## Components
 
 a. **Frontend (Client-Side)**
-   - Technology: React.js with Tailwind CSS
-   - Port: 3000
-   - Responsibilities:
-     - User interface rendering
-     - State management
-     - API communication with backend
-     - Audio playback interface
+
+- Technology: React.js with Tailwind CSS
+- Port: 3000
+- Responsibilities:
+  - User interface rendering
+  - State management
+  - API communication with backend
+  - Audio playback interface
 
 b. **Backend (Server-Side)**
-   - Technology: Express.js (Node.js)
-   - Port: 5002
-   - Responsibilities:
-     - RESTful API endpoints
-     - Business logic implementation
-     - Authentication and authorization
-     - File handling (upload, retrieval)
-     - Database operations
+
+- Technology: Express.js (Node.js)
+- Port: 5002
+- Responsibilities:
+  - RESTful API endpoints
+  - Business logic implementation
+  - Authentication and authorization
+  - File handling (upload, retrieval)
+  - Database operations
 
 c. **Database**
-   - Technology: MongoDB
-   - Responsibilities:
-     - Storing user information
-     - Storing audio metadata
-     - Maintaining relationships between users and their audio files
+
+- Technology: MongoDB
+- Responsibilities:
+  - Storing user information
+  - Storing audio metadata
+  - Maintaining relationships between users and their audio files
 
 d. **File Storage**
-   - Technology: Local File System
-   - Responsibilities:
-     - Storing uploaded audio files
-     - Note: In a production environment, this would typically be replaced with a cloud storage solution (e.g., AWS S3)
+
+- Technology: Local File System
+- Responsibilities:
+  - Storing uploaded audio files
+  - Note: In a production environment, this would typically be replaced with a cloud storage solution (e.g., AWS S3)
 
 e. **Authentication**
-   - JSON Web Tokens (JWT) for maintaining user sessions
+
+- JSON Web Tokens (JWT) for maintaining user sessions
 
 ## Data Flow
 
-a. The client sends HTTP requests to the backend API.
-b. The backend processes these requests, interacting with the database and file system as necessary.
-c. For audio file operations:
-   - Upload: Client sends file to backend, which saves it to the file system and metadata to the database.
-   - Retrieval: Backend fetches file from the file system and streams it to the client.
-d. The backend sends HTTP responses back to the client.
-e. The client updates its state and UI based on the received data.
+- The client sends HTTP requests to the backend API.
+- The backend processes these requests, interacting with the database and file system as necessary.
+- For audio file operations:
+  - Upload: Client sends file to backend, which saves it to the file system and metadata to the database.
+  - Retrieval: Backend fetches file from the file system and streams it to the client.
+- The backend sends HTTP responses back to the client.
+- The client updates its state and UI based on the received data.
 
 ## Key Features
 
@@ -89,10 +94,12 @@ e. The client updates its state and UI based on the received data.
 Here are the main API endpoints:
 
 1. Authentication
+
    - POST /api/auth/register - Register a new user
    - POST /api/auth/login - Login a user
 
 2. User Management
+
    - GET /api/user - Get user details
    - PUT /api/user - Update user details
    - DELETE /api/user - Delete user account
@@ -108,6 +115,7 @@ Here are the main API endpoints:
 ## Instructions to Run the App
 
 1. Prerequisites
+
    - Docker and Docker Compose installed on your system
    - Git (optional, for cloning the repository)
 
@@ -121,11 +129,13 @@ Here are the main API endpoints:
 3. If not using Git, ensure all project files are in a directory on your local machine.
 
 4. Build and start the containers:
-    ```
-    docker-compose up --build
-    ```
+
+   ```
+   docker-compose up --build
+   ```
 
 5. The application should now be running. Access it in your web browser:
+
 - Frontend: http://localhost:3000
 - Backend API: http://localhost:5002
 
@@ -139,10 +149,6 @@ Note: The first build may take several minutes as it needs to download and build
 ## Default User Credentials
 
 For testing purposes, you can use the following credentials:
+
 - Email: test02@gmail.com
 - Password: 12345678
-
-
-
-
-
